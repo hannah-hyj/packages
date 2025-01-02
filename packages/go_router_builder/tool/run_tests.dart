@@ -24,9 +24,6 @@ Future<void> main() async {
       .where((File f) => f.path.endsWith('.dart'))
       .toList();
   for (final File file in testFiles) {
-    if(!file.path.contains('set.dart')) {
-      continue;
-    }
     final String fileName = file.path.split('/').last;
     final File expectFile = File(p.join('${file.path}.expect'));
     if (!expectFile.existsSync()) {
@@ -58,8 +55,6 @@ Future<void> main() async {
           .format(results.join('\n\n'))
           .trim()
           .replaceAll('\r\n', '\n');
-
-      print(generated);
       expect(generated, equals(expectResult.replaceAll('\r\n', '\n')));
     }, timeout: const Timeout(Duration(seconds: 100)));
   }

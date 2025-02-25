@@ -598,6 +598,12 @@ class RouteMatchList with Diagnosticable {
     List<RouteMatchBase> currentMatches,
     List<RouteMatchBase> otherMatches,
     ImperativeRouteMatch match,
+
+
+
+
+
+    
   ) {
     final List<RouteMatchBase> newMatches = currentMatches.toList();
     if (otherMatches.last is ShellRouteMatch &&

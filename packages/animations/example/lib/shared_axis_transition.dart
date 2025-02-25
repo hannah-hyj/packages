@@ -40,6 +40,11 @@ class _SharedAxisTransitionDemoState extends State<SharedAxisTransitionDemo> {
       appBar: AppBar(title: const Text('Shared axis')),
       body: SafeArea(
         child: Column(
+
+
+
+
+          
           children: <Widget>[
             Expanded(
               child: PageTransitionSwitcher(

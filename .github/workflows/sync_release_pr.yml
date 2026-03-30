@@ -10,6 +10,7 @@ jobs:
   create_sync_pr:
     runs-on: ubuntu-latest
     permissions:
+      # The create-pull-request action needs both content and pull-requests permissions.
       contents: write
       pull-requests: write
     steps:

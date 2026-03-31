@@ -3,28 +3,11 @@ on:
   push:
     branches:
       - 'release-go_router'
+permissions:
+  # Release needs to push a tag back to the repo.
+  contents: write
 jobs:
   release:
-    permissions:
-      # Release needs to push a tag back to the repo.
-      contents: write
-      # The reusable workflow has "read-all" permissions:
-      actions: read
-      artifact-metadata: read
-      attestations: read
-      checks: read
-      deployments: read
-      discussions: read
-      issues: read
-      models: read
-      packages: read
-      pages: read
-      pull-requests: read
-      repository-projects: read
-      statuses: read
-      security-events: read
-      id-token: read
-
     uses: ./.github/workflows/reusable_release.yml
     with:
       is-batch-release: true

@@ -8,7 +8,7 @@ jobs:
     permissions:
       # Release needs to push a tag back to the repo.
       contents: write
-      # the reusable workflow has "read-all" permissions:
+      # The reusable workflow has "read-all" permissions:
       actions: read
       artifact-metadata: read
       attestations: read
